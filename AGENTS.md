@@ -2,8 +2,9 @@
 
 This repo is the Indiana / White River **research index**, not the org root.
 
-Canonical page: [RESEARCH.md](RESEARCH.md).
-Gist copy: https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3
+Public index: https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3
+
+Edit [RESEARCH.md](RESEARCH.md) here, then copy those bytes onto that gist. Do not point affiliated READMEs at this git.
 
 Home rule: `~/.grok/rules/weather-research.md`.
 
