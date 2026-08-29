@@ -32,7 +32,7 @@ Indiana / White River research
     miss gist:   https://gist.github.com/martialsystems/a1b032d2f353c56f3f91caeb09748978
     Statewide daily rain. Same CoCoRaHS stations and summers. RadarOnly, not GaugeCorr.
     ├── indiana_cocorahs_mrms   RadarOnly ≈ CoCoRaHS; a tree does not beat it on amount
-    └── indiana_radar_miss      sequel: when RadarOnly misses (miss map, not a new QPE)
+    └── indiana_radar_miss      sequel: JJA miss is not clock or lake county (miss map, not a new QPE)
 ```
 
 Rain-stage sits under White River Q because the label is Nora stage. It uses rain as an input. The precip lane is statewide CoCoRaHS vs RadarOnly, a different question.
@@ -53,7 +53,7 @@ flowchart TD
   Q3 --> Q4["Fall Creek at Indianapolis"]
   Q4 --> Q5["Eagle Creek at Centerton"]
   P --> P1["amount: RadarOnly close"]
-  P1 --> P2["miss map: same stations"]
+  P1 --> P2["JJA miss: not clock or lake"]
 ```
 
 ## Gists
