@@ -30,9 +30,11 @@ Indiana / White River research
 └── Precip
     amount gist: https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c
     miss gist:   https://gist.github.com/martialsystems/a1b032d2f353c56f3f91caeb09748978
-    Statewide daily rain. Same CoCoRaHS stations and summers. RadarOnly, not GaugeCorr.
-    ├── indiana_cocorahs_mrms   RadarOnly ≈ CoCoRaHS; a tree does not beat it on amount
-    └── indiana_radar_miss      sequel: JJA miss is not clock or lake county (miss map, not a new QPE)
+    winter gist: https://gist.github.com/martialsystems/d68a0bd0c0b6cc12749db4c40330e538
+    Statewide daily rain. Same CoCoRaHS stations. RadarOnly, not GaugeCorr.
+    ├── indiana_cocorahs_mrms        RadarOnly ≈ CoCoRaHS; a tree does not beat it on amount
+    ├── indiana_radar_miss           sequel: JJA miss is not clock or lake county
+    └── indiana_winter_lake_miss     NDJFM: lake 0.391 vs 0.375, not a jump
 ```
 
 Rain-stage sits under White River Q because the label is Nora stage. It uses rain as an input. The precip lane is statewide CoCoRaHS vs RadarOnly, a different question.
@@ -54,6 +56,7 @@ flowchart TD
   Q4 --> Q5["Eagle Creek at Centerton"]
   P --> P1["amount: RadarOnly close"]
   P1 --> P2["JJA miss: not clock or lake"]
+  P2 --> P3["NDJFM lake: not a jump"]
 ```
 
 ## Gists
@@ -65,6 +68,7 @@ flowchart TD
 | [White River hydrology](https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639) | White River Q | Persistence, NWM, Anderson, Fall Creek, Eagle Creek |
 | [RadarOnly ≈ CoCoRaHS](https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c) | Precip | Daily amount at held-out stations; tree does not beat radar |
 | [When RadarOnly misses](https://gist.github.com/martialsystems/a1b032d2f353c56f3f91caeb09748978) | Precip | Wet-day miss map on the same stations and summers |
+| [Winter lake miss](https://gist.github.com/martialsystems/d68a0bd0c0b6cc12749db4c40330e538) | Precip | NDJFM lake vs rest; 0.391 vs 0.375 is not a jump |
 
 ## Repos
 
@@ -94,5 +98,6 @@ flowchart TD
 |------|----------|
 | [indiana_cocorahs_mrms](https://github.com/martialsystems/indiana_cocorahs_mrms) | Does RadarOnly MRMS match CoCoRaHS daily rain at held-out Indiana stations? |
 | [indiana_radar_miss](https://github.com/martialsystems/indiana_radar_miss) | When does RadarOnly miss CoCoRaHS daily rain at held-out Indiana stations? |
+| [indiana_winter_lake_miss](https://github.com/martialsystems/indiana_winter_lake_miss) | Does the RadarOnly miss rate jump in the northwest lake sector in winter? |
 
 MIT. Martial Systems LLC.
