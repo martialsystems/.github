@@ -31,10 +31,13 @@ Indiana / White River research
     amount gist: https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c
     miss gist:   https://gist.github.com/martialsystems/a1b032d2f353c56f3f91caeb09748978
     winter gist: https://gist.github.com/martialsystems/d68a0bd0c0b6cc12749db4c40330e538
+    snow gist:   https://gist.github.com/martialsystems/cd2eadaba9fc1c776ba4a8a22c45a516
     Statewide daily rain. Same CoCoRaHS stations. RadarOnly, not GaugeCorr.
+    DJF snow is GHCND station totals vs 1991-2020 normals, a seasonal target.
     ├── indiana_cocorahs_mrms        RadarOnly ≈ CoCoRaHS; a tree does not beat it on amount
     ├── indiana_radar_miss           sequel: JJA miss is not clock or lake county
-    └── indiana_winter_lake_miss     NDJFM: lake 0.391 vs 0.375, not a jump
+    ├── indiana_winter_lake_miss     NDJFM: lake 0.391 vs 0.375, not a jump
+    └── indiana_djf_snow_tercile     DJF snow: October plus ENSO does not beat the normal
 ```
 
 Rain-stage sits under White River Q because the label is Nora stage. It uses rain as an input. The precip lane is statewide CoCoRaHS vs RadarOnly, a different question.
@@ -57,6 +60,7 @@ flowchart TD
   P --> P1["amount: RadarOnly close"]
   P1 --> P2["JJA miss: not clock or lake"]
   P2 --> P3["NDJFM lake: not a jump"]
+  P --> P4["DJF snow: ENSO does not beat normal"]
 ```
 
 ## Gists
@@ -69,6 +73,7 @@ flowchart TD
 | [RadarOnly ≈ CoCoRaHS](https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c) | Precip | Daily amount at held-out stations; tree does not beat radar |
 | [When RadarOnly misses](https://gist.github.com/martialsystems/a1b032d2f353c56f3f91caeb09748978) | Precip | Wet-day miss map on the same stations and summers |
 | [Winter lake miss](https://gist.github.com/martialsystems/d68a0bd0c0b6cc12749db4c40330e538) | Precip | NDJFM lake vs rest; 0.391 vs 0.375 is not a jump |
+| [DJF snow vs normal](https://gist.github.com/martialsystems/cd2eadaba9fc1c776ba4a8a22c45a516) | Precip | October plus ENSO does not beat the 1991-2020 DJF snow normal |
 
 ## Repos
 
@@ -99,5 +104,6 @@ flowchart TD
 | [indiana_cocorahs_mrms](https://github.com/martialsystems/indiana_cocorahs_mrms) | Does RadarOnly MRMS match CoCoRaHS daily rain at held-out Indiana stations? |
 | [indiana_radar_miss](https://github.com/martialsystems/indiana_radar_miss) | When does RadarOnly miss CoCoRaHS daily rain at held-out Indiana stations? |
 | [indiana_winter_lake_miss](https://github.com/martialsystems/indiana_winter_lake_miss) | Does the RadarOnly miss rate jump in the northwest lake sector in winter? |
+| [indiana_djf_snow_tercile](https://github.com/martialsystems/indiana_djf_snow_tercile) | Can October features plus ENSO beat the 1991-2020 DJF snowfall normal at held-out Indiana GHCND stations? |
 
 MIT. Martial Systems LLC.

@@ -22,6 +22,7 @@ TREES = (
     "indiana_cocorahs_mrms",
     "indiana_radar_miss",
     "indiana_winter_lake_miss",
+    "indiana_djf_snow_tercile",
 )
 
 GISTS = (
@@ -31,6 +32,7 @@ GISTS = (
     "b5f900aad37487bb8c0206a321c1ed5c",
     "a1b032d2f353c56f3f91caeb09748978",
     "d68a0bd0c0b6cc12749db4c40330e538",
+    "cd2eadaba9fc1c776ba4a8a22c45a516",
 )
 
 class IndexTest(unittest.TestCase):
