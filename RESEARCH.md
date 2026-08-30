@@ -1,4 +1,4 @@
-# Indiana / White River research
+# Indiana Research
 
 The readable index is the gist: https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3
 
