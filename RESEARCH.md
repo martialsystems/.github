@@ -1,8 +1,8 @@
-# Indiana Research
+# Indiana research
 
 The readable index is the gist: https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3
 
-That page is a single document: purpose, relationship tree, lane gists, and the repo list. This file in `martialsystems/.github` is a pointer so a GitHub blob and the gist do not drift as two full copies.
+White River is one lane on that page, not the lab. That page is a single document: purpose, relationship tree, lane gists, and the repo list. This file in `martialsystems/.github` is a pointer so a GitHub blob and the gist do not drift as two full copies.
 
 Lane writeups (locked summaries, not indexes):
 
