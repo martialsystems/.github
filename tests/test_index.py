@@ -66,6 +66,12 @@ class IndexTest(unittest.TestCase):
             self.assertNotIn("\u2014", text, msg=name)
             self.assertNotIn("What it is not", text, msg=name)
 
+    def test_public_files_omit_research_console(self) -> None:
+        for name in ("RESEARCH.md", "README.md", "profile/README.md", "AGENTS.md"):
+            text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertNotIn("indiana_research_console", text, msg=name)
+            self.assertNotIn("Open_the_research_console", text, msg=name)
+
 
 if __name__ == "__main__":
     unittest.main()
