@@ -52,6 +52,11 @@ class IndexTest(unittest.TestCase):
         self.assertNotIn("indiana_djf_snow_tercile", text)
         for g in LANE_GISTS:
             self.assertIn(g, text)
+        self.assertTrue(
+            any(line.count("[![") >= 4 for line in text.splitlines()),
+            msg="lane writeup buttons must share one markdown line",
+        )
+        self.assertNotIn("Parent: [![", text)
         for i, line in enumerate(text.splitlines(), start=1):
             stripped = line.strip()
             self.assertFalse(
