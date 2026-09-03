@@ -8,7 +8,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 
-INDEX_GIST = "66b896b0a4a0b8cba2b478aef64312f3"
+PAGES_INDEX = "martialsystems.github.io/indiana_wx_pages"
+INDEX_GIST = "66b896b0"
 LANE_GISTS = (
     "16584e78d079666f7e8994b4cc6158be",
     "1104e5e47b8a04006ec694d289d43639",
@@ -27,10 +28,11 @@ class IndexTest(unittest.TestCase):
             other = (ROOT / name).read_text(encoding="utf-8")
             self.assertEqual(other, body, msg=name + " drifted from RESEARCH.md")
 
-    def test_stub_points_at_gist(self) -> None:
+    def test_stub_points_at_live_console(self) -> None:
         text = self._research()
-        self.assertIn("gist.github.com/martialsystems/" + INDEX_GIST, text)
-        self.assertIn("readable index is the gist", text.lower())
+        self.assertIn(PAGES_INDEX, text)
+        self.assertIn("pointer", text.lower())
+        self.assertIn(INDEX_GIST, text)
         self.assertNotIn("```mermaid", text)
         self.assertNotIn("indiana_djf_snow_tercile", text)
         for g in LANE_GISTS:
