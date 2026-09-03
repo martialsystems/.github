@@ -8,15 +8,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 
-PAGES_INDEX = "martialsystems.github.io/indiana_wx_pages"
 PAGES_URL = "https://martialsystems.github.io/indiana_wx_pages/"
-CONSOLE_BADGE = (
-    "[![Open the research console]"
-    "(https://img.shields.io/badge/Open_the_research_console-2e7d32"
-    "?style=for-the-badge)]"
-    f"({PAGES_URL})"
-)
 INDEX_GIST = "66b896b0"
+GIST_URL = "https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3"
 LANE_GISTS = (
     "16584e78d079666f7e8994b4cc6158be",
     "1104e5e47b8a04006ec694d289d43639",
@@ -35,38 +29,18 @@ class IndexTest(unittest.TestCase):
             other = (ROOT / name).read_text(encoding="utf-8")
             self.assertEqual(other, body, msg=name + " drifted from RESEARCH.md")
 
-    def test_stub_points_at_live_console(self) -> None:
+    def test_stub_points_at_gist(self) -> None:
         text = self._research()
-        self.assertIn(PAGES_INDEX, text)
-        self.assertIn(PAGES_URL, text)
-        self.assertIn("Open the research console", text)
-        self.assertIn("img.shields.io", text)
-        self.assertIn(CONSOLE_BADGE, text)
-        self.assertIn("2e7d32", text)
-        self.assertNotIn("labelColor", text)
-        self.assertNotIn("6e1f1c", text)
-        self.assertNotIn("e6d5b8", text)
-        self.assertIn("pointer", text.lower())
+        self.assertIn("readable index is the gist", text)
+        self.assertIn(GIST_URL, text)
         self.assertIn(INDEX_GIST, text)
+        self.assertNotIn("Open the research console", text)
+        self.assertNotIn("img.shields.io", text)
         self.assertNotIn("```mermaid", text)
         self.assertNotIn("indiana_djf_snow_tercile", text)
         for g in LANE_GISTS:
             self.assertIn(g, text)
-        self.assertTrue(
-            any(line.count("[![") >= 4 for line in text.splitlines()),
-            msg="lane writeup buttons must share one markdown line",
-        )
-        self.assertNotIn("Parent: [![", text)
-        for i, line in enumerate(text.splitlines(), start=1):
-            stripped = line.strip()
-            self.assertFalse(
-                stripped.startswith("https://gist.github.com"),
-                msg=f"line {i} is a bare gist URL",
-            )
-            self.assertFalse(
-                stripped.startswith("- https://"),
-                msg=f"line {i} is a pasted URL bullet",
-            )
+        self.assertIn("pointer", text.lower())
 
     def test_pages_url_is_not_an_autolink_line(self) -> None:
         """Href inside the badge is allowed. A line that is only the URL is not."""

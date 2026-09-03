@@ -1,13 +1,14 @@
 # Indiana research
 
-The readable index is the live console.
+The readable index is the gist: https://gist.github.com/martialsystems/66b896b0a4a0b8cba2b478aef64312f3
 
-[![Open the research console](https://img.shields.io/badge/Open_the_research_console-2e7d32?style=for-the-badge)](https://martialsystems.github.io/indiana_wx_pages/)
-
-Gist `66b896b0` is a pointer to that page so old README footers still land. This file in `martialsystems/.github` is the same pointer. Do not keep a second full tree list here.
+White River is one lane on that page, not the lab. That page is a single document: purpose, relationship tree, lane gists, and the repo list. This file in `martialsystems/.github` is a pointer so a GitHub blob and the gist do not drift as two full copies.
 
 Lane writeups (locked summaries, not indexes):
 
-[![Maps writeup](https://img.shields.io/badge/Maps_writeup-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/16584e78d079666f7e8994b4cc6158be) [![White River Q](https://img.shields.io/badge/White_River_Q-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639) [![Precip writeup](https://img.shields.io/badge/Precip_writeup-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c) [![Temp writeup](https://img.shields.io/badge/Temp_writeup-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/e5de316dbb5f672573906572730e3735)
+- Maps: https://gist.github.com/martialsystems/16584e78d079666f7e8994b4cc6158be
+- White River Q: https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639
+- Precip: https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c
+- Temp: https://gist.github.com/martialsystems/e5de316dbb5f672573906572730e3735
 
 MIT. Martial Systems LLC.
