@@ -12,8 +12,8 @@ PAGES_INDEX = "martialsystems.github.io/indiana_wx_pages"
 PAGES_URL = "https://martialsystems.github.io/indiana_wx_pages/"
 CONSOLE_BADGE = (
     "[![Open the research console]"
-    "(https://img.shields.io/badge/Open-research_console-e6d5b8"
-    "?style=for-the-badge&labelColor=1f2a1e&color=6e1f1c)]"
+    "(https://img.shields.io/badge/Open_the_research_console-2e7d32"
+    "?style=for-the-badge)]"
     f"({PAGES_URL})"
 )
 INDEX_GIST = "66b896b0"
@@ -42,6 +42,10 @@ class IndexTest(unittest.TestCase):
         self.assertIn("Open the research console", text)
         self.assertIn("img.shields.io", text)
         self.assertIn(CONSOLE_BADGE, text)
+        self.assertIn("2e7d32", text)
+        self.assertNotIn("labelColor", text)
+        self.assertNotIn("6e1f1c", text)
+        self.assertNotIn("e6d5b8", text)
         self.assertIn("pointer", text.lower())
         self.assertIn(INDEX_GIST, text)
         self.assertNotIn("```mermaid", text)
