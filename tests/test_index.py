@@ -9,6 +9,13 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 PAGES_INDEX = "martialsystems.github.io/indiana_wx_pages"
+PAGES_URL = "https://martialsystems.github.io/indiana_wx_pages/"
+CONSOLE_BADGE = (
+    "[![Open the research console]"
+    "(https://img.shields.io/badge/Open-research_console-e6d5b8"
+    "?style=for-the-badge&labelColor=1f2a1e&color=6e1f1c)]"
+    f"({PAGES_URL})"
+)
 INDEX_GIST = "66b896b0"
 LANE_GISTS = (
     "16584e78d079666f7e8994b4cc6158be",
@@ -31,12 +38,34 @@ class IndexTest(unittest.TestCase):
     def test_stub_points_at_live_console(self) -> None:
         text = self._research()
         self.assertIn(PAGES_INDEX, text)
+        self.assertIn(PAGES_URL, text)
+        self.assertIn("Open the research console", text)
+        self.assertIn("img.shields.io", text)
+        self.assertIn(CONSOLE_BADGE, text)
         self.assertIn("pointer", text.lower())
         self.assertIn(INDEX_GIST, text)
         self.assertNotIn("```mermaid", text)
         self.assertNotIn("indiana_djf_snow_tercile", text)
         for g in LANE_GISTS:
             self.assertIn(g, text)
+
+    def test_pages_url_is_not_an_autolink_line(self) -> None:
+        """Href inside the badge is allowed. A line that is only the URL is not."""
+        text = self._research()
+        bare = PAGES_URL.rstrip("/")
+        forbidden = {
+            PAGES_URL,
+            bare,
+            f"<{PAGES_URL}>",
+            f"<{bare}>",
+        }
+        for i, line in enumerate(text.splitlines(), start=1):
+            stripped = line.strip()
+            self.assertNotIn(
+                stripped,
+                forbidden,
+                msg=f"line {i} is a Pages autolink",
+            )
 
     def test_prose_defaults(self) -> None:
         for name in ("RESEARCH.md", "README.md", "profile/README.md", "AGENTS.md"):

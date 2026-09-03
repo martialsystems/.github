@@ -1,6 +1,8 @@
 # Indiana research
 
-The readable index is the live console: https://martialsystems.github.io/indiana_wx_pages/
+The readable index is the live console.
+
+[![Open the research console](https://img.shields.io/badge/Open-research_console-e6d5b8?style=for-the-badge&labelColor=1f2a1e&color=6e1f1c)](https://martialsystems.github.io/indiana_wx_pages/)
 
 Gist `66b896b0` is a pointer to that page so old README footers still land. This file in `martialsystems/.github` is the same pointer. Do not keep a second full tree list here.
 
