@@ -52,6 +52,16 @@ class IndexTest(unittest.TestCase):
         self.assertNotIn("indiana_djf_snow_tercile", text)
         for g in LANE_GISTS:
             self.assertIn(g, text)
+        for i, line in enumerate(text.splitlines(), start=1):
+            stripped = line.strip()
+            self.assertFalse(
+                stripped.startswith("https://gist.github.com"),
+                msg=f"line {i} is a bare gist URL",
+            )
+            self.assertFalse(
+                stripped.startswith("- https://"),
+                msg=f"line {i} is a pasted URL bullet",
+            )
 
     def test_pages_url_is_not_an_autolink_line(self) -> None:
         """Href inside the badge is allowed. A line that is only the URL is not."""
