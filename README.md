@@ -10,5 +10,6 @@ Lane writeups (locked summaries, not indexes):
 - White River Q: https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639
 - Precip: https://gist.github.com/martialsystems/b5f900aad37487bb8c0206a321c1ed5c
 - Temp: https://gist.github.com/martialsystems/e5de316dbb5f672573906572730e3735
+- Re-TRAC: https://gist.github.com/martialsystems/1b6d686320adea674727af588e77bf80
 
 MIT. Martial Systems LLC.

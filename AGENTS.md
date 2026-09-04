@@ -10,7 +10,7 @@ When a new weather git is created, the same finish that pushes it also:
 
 1. Adds the tree to gist `66b896b0` (ascii tree, mermaid, repo table)
 2. Keeps `RESEARCH.md`, `README.md`, and `profile/README.md` as the same stub
-3. Updates the lane gist (Maps, White River Q, Precip, or Temp). Precip is one gist with sections, not a gist per sequel
+3. Updates the lane gist (Maps, White River Q, Precip, Temp, or Re-TRAC). Precip is one gist with sections, not a gist per sequel. Re-TRAC stays off Site / `indiana_wx_pages`.
 4. New README footer, exact URL:
 
 ```text
