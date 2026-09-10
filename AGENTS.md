@@ -21,7 +21,7 @@ Do not ship a shields.io badge as the README footer.
 
 Do not leave a new git linked only at https://github.com/martialsystems.
 
-Fly trees (`fly_pong`, `fly_chess`, `fly_abgcrz`) use a separate gist: https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
+Fly trees (`fly_pong`, `fly_chess`, `fly_climax`) use a separate gist: https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
 
 [FLY.md](FLY.md) is the pointer stub for that gist. Do not add fly trees to gist `66b896b0`. Do not keep a full copy of the fly index in this git.
 

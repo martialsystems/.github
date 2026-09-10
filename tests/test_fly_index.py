@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FLY_INDEX_GIST = "12835f747d6360781f3cc7f91f243178"
 FLY_GIST_URL = "https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178"
 WEATHER_GIST = "66b896b0"
-TREES = ("fly_pong", "fly_chess", "fly_abgcrz")
+TREES = ("fly_pong", "fly_chess", "fly_climax")
 
 
 class FlyIndexTest(unittest.TestCase):
@@ -35,7 +35,7 @@ class FlyIndexTest(unittest.TestCase):
         self.assertEqual(weather, (ROOT / "README.md").read_text(encoding="utf-8"))
         self.assertEqual(weather, (ROOT / "profile/README.md").read_text(encoding="utf-8"))
         self.assertNotIn("fly_pong", weather)
-        self.assertNotIn("fly_abgcrz", weather)
+        self.assertNotIn("fly_climax", weather)
         self.assertNotIn(FLY_INDEX_GIST, weather)
 
     def test_prose_defaults(self) -> None:
