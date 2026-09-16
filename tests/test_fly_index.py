@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 FLY_INDEX_GIST = "12835f747d6360781f3cc7f91f243178"
 FLY_GIST_URL = "https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178"
-TREES = ("fly_pong", "fly_chess", "fly_climax", "fly_vial", "vial_sanguis", "vial_sanguis2", "vial_morsus", "gf_cheat", "fly_icarus", "fly_p1_sign", "fly_p1_mal")
+TREES = ("fly_pong", "fly_chess", "fly_climax", "fly_vial", "vial_sanguis", "vial_sanguis2", "vial_morsus", "vial_culex", "gf_cheat", "fly_icarus", "fly_p1_sign", "fly_p1_mal")
 
 
 class FlyIndexTest(unittest.TestCase):
