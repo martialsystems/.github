@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 FLY_INDEX_GIST = "12835f747d6360781f3cc7f91f243178"
 FLY_GIST_URL = "https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178"
-WEATHER_GIST = "66b896b0"
 TREES = ("fly_pong", "fly_chess", "fly_climax", "fly_vial", "vial_sanguis", "vial_sanguis2", "gf_cheat", "fly_icarus", "fly_p1_sign")
 
 
@@ -23,7 +22,8 @@ class FlyIndexTest(unittest.TestCase):
         self.assertIn("readable index is the gist", text)
         self.assertIn(FLY_GIST_URL, text)
         self.assertIn(FLY_INDEX_GIST, text)
-        self.assertNotIn(WEATHER_GIST, text)
+        self.assertNotIn("66b896b0", text)
+        self.assertNotIn("weather", text.lower())
         self.assertNotIn("different gist", text.lower())
         self.assertIn("pointer", text.lower())
         self.assertNotIn("```mermaid", text)
@@ -31,13 +31,13 @@ class FlyIndexTest(unittest.TestCase):
         for name in TREES:
             self.assertIn(name, text)
 
-    def test_weather_stub_unchanged_by_fly_file(self) -> None:
-        weather = (ROOT / "RESEARCH.md").read_text(encoding="utf-8")
-        self.assertEqual(weather, (ROOT / "README.md").read_text(encoding="utf-8"))
-        self.assertEqual(weather, (ROOT / "profile/README.md").read_text(encoding="utf-8"))
-        self.assertNotIn("fly_pong", weather)
-        self.assertNotIn("fly_climax", weather)
-        self.assertNotIn(FLY_INDEX_GIST, weather)
+    def test_research_stub_omits_fly_trees(self) -> None:
+        research = (ROOT / "RESEARCH.md").read_text(encoding="utf-8")
+        self.assertEqual(research, (ROOT / "README.md").read_text(encoding="utf-8"))
+        self.assertEqual(research, (ROOT / "profile/README.md").read_text(encoding="utf-8"))
+        self.assertNotIn("fly_pong", research)
+        self.assertNotIn("fly_climax", research)
+        self.assertNotIn(FLY_INDEX_GIST, research)
 
     def test_prose_defaults(self) -> None:
         for name in ("FLY.md", "AGENTS.md"):
@@ -49,8 +49,13 @@ class FlyIndexTest(unittest.TestCase):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertIn(FLY_INDEX_GIST, text)
         self.assertIn("FLY.md", text)
+        self.assertIn("fly-research.md", text)
         self.assertIn("vial_sanguis", text)
         self.assertIn("vial_sanguis2", text)
         self.assertIn("fly_vial", text)
         self.assertNotIn("use a separate gist", text)
         self.assertNotIn("Do not add fly trees to gist", text)
+
+
+if __name__ == "__main__":
+    unittest.main()

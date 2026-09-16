@@ -23,6 +23,8 @@ Do not leave a new git linked only at https://github.com/martialsystems.
 
 Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `vial_sanguis2`, `gf_cheat`, `fly_icarus`, `fly_p1_sign`): https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
 
+Home rule: `~/.grok/rules/fly-research.md`.
+
 [FLY.md](FLY.md) is the pointer stub for that gist. `vial_sanguis` sits under `fly_vial` on that box tree. `vial_sanguis2` sits under `vial_sanguis`. Do not keep a full copy of the fly index in this git.
 
 ```bash
