@@ -25,7 +25,7 @@ Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `v
 
 Home rule: `~/.grok/rules/fly-research.md`.
 
-[FLY.md](FLY.md) is the pointer stub for that gist. `vial_sanguis` sits under `fly_vial` on that box tree. `vial_sanguis2` sits under `vial_sanguis`. `vial_morsus` sits under `vial_sanguis2`. `vial_culex` is a sibling of `fly_vial`, not an arm on those trees. `vial_handoff` maps living morsus mid-bridge genomes into the culex kitchen; it is not a restamp of either origin. Do not keep a full copy of the fly index in this git.
+[FLY.md](FLY.md) is the pointer stub for that gist. `vial_sanguis` sits under `fly_vial` on that box tree. `vial_sanguis2` sits under `vial_sanguis`. `vial_morsus` sits under `vial_sanguis2`. `vial_culex` is a sibling of `fly_vial`, not an arm on those trees. `vial_handoff` maps living morsus mid-bridge genomes into the culex kitchen; it is not a restamp of either origin. The gist Repos section uses one heading per root, matching the box tree. A child is a row in the parent's table. Do not append a new git to one flat table. Do not keep a full copy of the fly index in this git.
 
 ```bash
 python3 -m pytest tests -q

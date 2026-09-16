@@ -56,6 +56,12 @@ class FlyIndexTest(unittest.TestCase):
         self.assertNotIn("use a separate gist", text)
         self.assertNotIn("Do not add fly trees to gist", text)
 
+    def test_agents_repos_follow_box_tree(self) -> None:
+        text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+        self.assertIn("one heading per root", text)
+        self.assertIn("parent's table", text)
+        self.assertIn("Do not append a new git to one flat table", text)
+
 
 if __name__ == "__main__":
     unittest.main()
