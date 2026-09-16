@@ -23,7 +23,8 @@ class FlyIndexTest(unittest.TestCase):
         self.assertIn("readable index is the gist", text)
         self.assertIn(FLY_GIST_URL, text)
         self.assertIn(FLY_INDEX_GIST, text)
-        self.assertIn(WEATHER_GIST, text)
+        self.assertNotIn(WEATHER_GIST, text)
+        self.assertNotIn("different gist", text.lower())
         self.assertIn("pointer", text.lower())
         self.assertNotIn("```mermaid", text)
         self.assertNotIn("img.shields.io", text)
@@ -44,11 +45,12 @@ class FlyIndexTest(unittest.TestCase):
             self.assertNotIn("\u2014", text, msg=name)
             self.assertNotIn("What it is not", text, msg=name)
 
-    def test_agents_names_both_indexes(self) -> None:
+    def test_agents_names_fly_gist(self) -> None:
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
-        self.assertIn(WEATHER_GIST, text)
         self.assertIn(FLY_INDEX_GIST, text)
         self.assertIn("FLY.md", text)
         self.assertIn("vial_sanguis", text)
         self.assertIn("vial_sanguis2", text)
         self.assertIn("fly_vial", text)
+        self.assertNotIn("use a separate gist", text)
+        self.assertNotIn("Do not add fly trees to gist", text)
