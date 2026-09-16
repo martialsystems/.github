@@ -58,9 +58,21 @@ class FlyIndexTest(unittest.TestCase):
 
     def test_agents_repos_follow_box_tree(self) -> None:
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
-        self.assertIn("one heading per root", text)
+        self.assertIn("one humanized heading per root", text)
         self.assertIn("parent's table", text)
         self.assertIn("Do not append a new git to one flat table", text)
+        self.assertIn("Do not use the git name as the heading", text)
+        for title in (
+            "Pong",
+            "Chess",
+            "Abdominal pulse",
+            "Closed vial",
+            "Mosquito theft",
+            "Handoff",
+            "Giant fiber",
+            "Icarus",
+        ):
+            self.assertIn(title, text)
 
 
 if __name__ == "__main__":
