@@ -21,7 +21,7 @@ Do not ship a shields.io badge as the README footer.
 
 Do not leave a new git linked only at https://github.com/martialsystems.
 
-Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `vial_sanguis2`, `vial_morsus`, `vial_culex`, `vial_handoff`, `gf_cheat`, `fly_icarus`, `fly_p1_sign`, `fly_p1_mal`, `fly_mal_drive`, `fly_lh_frac`, `snn_doom`): https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
+Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `vial_sanguis2`, `vial_morsus`, `vial_culex`, `vial_handoff`, `gf_cheat`, `fly_icarus`, `fly_p1_sign`, `fly_p1_mal`, `fly_mal_drive`, `fly_lh_frac`, `fly_law_gate`, `snn_doom`): https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
 
 Home rule: `~/.grok/rules/fly-research.md`.
 
