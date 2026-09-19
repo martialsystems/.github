@@ -21,11 +21,11 @@ Do not ship a shields.io badge as the README footer.
 
 Do not leave a new git linked only at https://github.com/martialsystems.
 
-Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `vial_sanguis2`, `vial_morsus`, `vial_culex`, `vial_handoff`, `gf_cheat`, `fly_icarus`, `fly_p1_sign`, `fly_p1_mal`, `fly_mal_drive`, `fly_lh_frac`, `fly_law_gate`, `snn_doom`): https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
+Fly trees (`fly_pong`, `fly_chess`, `fly_climax`, `fly_vial`, `vial_sanguis`, `vial_sanguis2`, `vial_morsus`, `vial_nectar`, `vial_culex`, `vial_handoff`, `gf_cheat`, `fly_icarus`, `fly_p1_sign`, `fly_p1_mal`, `fly_mal_drive`, `fly_lh_frac`, `fly_law_gate`, `snn_doom`): https://gist.github.com/martialsystems/12835f747d6360781f3cc7f91f243178
 
 Home rule: `~/.grok/rules/fly-research.md`.
 
-[FLY.md](FLY.md) is the pointer stub for that gist. `vial_sanguis` sits under `fly_vial` on that box tree. `vial_sanguis2` sits under `vial_sanguis`. `vial_morsus` sits under `vial_sanguis2`. `vial_culex` is a sibling of `fly_vial`, not an arm on those trees. `vial_handoff` maps living morsus mid-bridge genomes into the culex kitchen; it is not a restamp of either origin. The gist Repos section uses one humanized heading per root (Pong, Chess, Abdominal pulse, Closed vial, Mosquito theft, Handoff, Giant fiber, Icarus, 8k LIF Doom). `snn_doom` is its own root. Title is that name as a link. Repo holds the slug. A child is a row in the parent's table. Do not append a new git to one flat table. Do not use the git name as the heading. Do not keep a full copy of the fly index in this git.
+[FLY.md](FLY.md) is the pointer stub for that gist. `vial_sanguis` sits under `fly_vial` on that box tree. `vial_sanguis2` sits under `vial_sanguis`. `vial_morsus` sits under `vial_sanguis2`. `vial_culex` is a sibling of `fly_vial`, not an arm on those trees. `vial_nectar` is a sibling of `fly_vial`, not an arm on the sanguis tree. `vial_handoff` maps living morsus mid-bridge genomes into the culex kitchen; it is not a restamp of either origin. The gist Repos section uses one humanized heading per root (Pong, Chess, Abdominal pulse, Closed vial, Long-neck nectar, Mosquito theft, Handoff, Giant fiber, Icarus, 8k LIF Doom). `snn_doom` is its own root. Title is that name as a link. Repo holds the slug. A child is a row in the parent's table. Do not append a new git to one flat table. Do not use the git name as the heading. Do not keep a full copy of the fly index in this git.
 
 ```bash
 python3 -m pytest tests -q
